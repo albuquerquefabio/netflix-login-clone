@@ -1,0 +1,51 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+body {
+  background: #000;
+}
+header,
+section,
+div,
+form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+label,
+a {
+  text-decoration: none;
+  color: gray;
+  font-size: 0.74em;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.top-bar {
+  height: auto;
+}
+.top-bar img {
+  height: 5em;
+}
