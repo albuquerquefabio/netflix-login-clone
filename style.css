@@ -72,7 +72,7 @@ a:hover {
   justify-content: center; /* alinha horizontalmente */
 }
 .form-container {
-  max-width: 35em;
+  max-width: 28em;
   margin: 2em auto;
   padding: 3em;
   background-color: rgba(0, 0, 0, 0.8);
@@ -175,4 +175,22 @@ label[for="senha"] {
 .remind label {
   margin-left: 0.5em;
   vertical-align: middle;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1024px) {
+  .form-container {
+    max-width: 35em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner img {
+    opacity: 0;
+  }
+  .form-container {
+    max-width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
 }
