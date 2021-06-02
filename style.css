@@ -44,6 +44,20 @@ a:hover {
 .flex-column {
   flex-direction: column;
 }
+
+.banner,
+.banner img {
+  min-width: 100%;
+  height: 100vh;
+}
+.banner {
+  position: absolute;
+  z-index: -1;
+}
+.banner img {
+  opacity: 0.45;
+}
+
 .top-bar {
   height: auto;
 }
@@ -61,6 +75,7 @@ a:hover {
   max-width: 35em;
   margin: 2em auto;
   padding: 3em;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .form-container h1 {
   font-weight: 600;
@@ -111,6 +126,22 @@ label[for="senha"] {
   visibility: visible;
 }
 
+#email:not(:placeholder-shown) + label[for="email"],
+#senha:not(:placeholder-shown) + label[for="senha"] {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+#email:invalid,
+#senha:invalid {
+  border: 2px solid #e50914;
+}
+#email:valid,
+#senha:valid {
+  border: none;
+}
+
 .form-button {
   margin-bottom: 1em;
   padding: 1em;
@@ -122,6 +153,11 @@ label[for="senha"] {
 
   background-color: #e50914;
   color: #fff;
+  transition: background 0.25s ease-in-out;
+}
+.form-button:hover {
+  background-color: #90060d;
+  cursor: pointer;
 }
 
 .form-extra {

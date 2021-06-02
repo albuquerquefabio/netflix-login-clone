@@ -17,6 +17,13 @@
   </head>
   <body>
     <section>
+      <div class="banner">
+        <img
+          src="img/netflix-bg.jpg"
+          alt="Imagem com galeria de filmes do Netflix."
+        />
+      </div>
+
       <div class="top-bar">
         <img src="img/netflix-logo.png" alt="Logo Netflix" />
       </div>
@@ -31,6 +38,7 @@
               placeholder="E-mail"
               name="email"
               required
+              pattern="\S+.*"
             />
             <label for="email">E-mail</label>
 
@@ -41,6 +49,7 @@
               placeholder="Senha"
               name="password"
               required
+              pattern="\S+.*"
             />
             <label for="senha">Senha</label>
 
