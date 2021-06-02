@@ -27,6 +27,7 @@ h3,
 h4 {
   color: #fff;
 }
+
 label,
 a {
   text-decoration: none;
@@ -47,5 +48,95 @@ a:hover {
   height: auto;
 }
 .top-bar img {
+  width: 15em;
   height: 5em;
+  padding: 0.75em 1em;
+}
+
+.form-area {
+  align-content: center; /* alinhar verticalmente */
+  justify-content: center; /* alinha horizontalmente */
+}
+.form-container {
+  max-width: 35em;
+  margin: 2em auto;
+  padding: 3em;
+}
+.form-container h1 {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.5em;
+}
+.form-container form {
+  position: relative;
+}
+
+.form-input {
+  margin-bottom: 1em;
+  padding: 1.5em 1em 0.5em 1em;
+  border-radius: 0.5em;
+  border: none;
+  font-size: 1em;
+
+  background-color: #333;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+.form-input:focus {
+  background-color: #454545;
+}
+.form-input:focus::placeholder {
+  color: transparent;
+}
+label[for="email"],
+label[for="senha"] {
+  position: absolute;
+  padding-left: 1.35em;
+  padding-top: 0.5em;
+  visibility: hidden;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s ease-in-out;
+}
+
+label[for="senha"] {
+  top: 6em;
+}
+/* Buscando input por id */
+#email:focus + label[for="email"],
+#senha:focus + label[for="senha"] {
+  opacity: 1;
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.form-button {
+  margin-bottom: 1em;
+  padding: 1em;
+  text-align: center;
+  border-radius: 0.5em;
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+
+  background-color: #e50914;
+  color: #fff;
+}
+
+.form-extra {
+  justify-content: space-between;
+}
+
+.remind,
+.help {
+  width: auto;
+  height: 1.1em;
+  margin: 0.75em 0;
+  align-content: center;
+}
+
+.remind label {
+  margin-left: 0.5em;
+  vertical-align: middle;
 }

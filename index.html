@@ -20,20 +20,34 @@
       <div class="top-bar">
         <img src="img/netflix-logo.png" alt="Logo Netflix" />
       </div>
-      <div class="form-area">
+      <div class="form-area flex-column">
         <div class="form-container">
           <h1>Entrar</h1>
-          <form action="#">
-            <input type="text" placeholder="E-mail" name="email" required />
+          <form class="flex-column" action="#">
             <input
+              class="form-input"
+              id="email"
+              type="text"
+              placeholder="E-mail"
+              name="email"
+              required
+            />
+            <label for="email">E-mail</label>
+
+            <input
+              class="form-input"
+              id="senha"
               type="password"
               placeholder="Senha"
               name="password"
               required
             />
-            <input type="submit" value="Enviar" />
-            <div class="form-extra">
-              <div class="remind">
+            <label for="senha">Senha</label>
+
+            <input class="form-button" type="submit" value="Enviar" />
+
+            <div class="form-extra flex-row">
+              <div class="remind flex-row">
                 <input type="checkbox" name="remind" id="remind" />
                 <label for="remind">Lembrar-se de mim.</label>
               </div>
